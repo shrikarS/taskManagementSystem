@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task management System</h1>
+        <div >
+            <input type="text" name="searchFunction" id="searchFunction">
+            <button onclick="" id="submitButton">Search</button>
+            <button onclick="document.getElementById('searchFunction').value = ''">Clear</button>
+        </div>
+    </header>
+    <section class="heroSection">
+        <div>
+            <form autocomplete="on" onsubmit="submitForm()" id="formSection">
+                <label for="taskID">Task Id</label>
+                <input type="text" name="taskID" id="idTask" required>
+                <br>
+                <label for="name">Task Name</label>
+                <input type="text" name="name" id="name" required pattern="[a-zA-Z ]+"> 
+                <br>
+                <label for="startDate">Starting Date</label>
+                <input type="date" name="startDate" id="startDate">
+                <br>
+                <label for="endDate">End Date</label>
+                <input type="date" name="endDate" id="endDate" required>
+                <br>
+                <label for="status">status</label>
+                <select name="status" id="status">
+                    <option value="inProgress">inProgress</option>
+                    <option value="completed">completed</option>
+                    <option value="canceled">canceled</option>
+                    <option value="duePast">duePast</option>
+                    <option value="deleted">deleted</option>
+                </select>
+        
+                <button type="submit" id="ParentTaskButton">submit</button>
+            </form>
+        </div>
+        <div>
+            <section class="tableSection">
+                <table id="tableMain">
+                    <tbody id = 'tableContent'>
+                    </tbody>
+                </table>
+                <!-- <button onclick="myFunction()">Try it</button> -->
+        
+        </div>
+    
+    </section>
+    
+    </section>
+    <section id="hiddenForm">
+        <form id="subtaskForm">
+            <input type="hidden" id="parentTaskId">
+        
+            <label for="subTaskName">Subtask Name:</label>
+            <input type="text" id="subTaskName" required>
+        
+            <label for="subTaskStartDate">Start Date:</label>
+            <input type="date" id="subTaskStartDate" required>
+        
+            <label for="subTaskEndDate">End Date:</label>
+            <input type="date" id="subTaskEndDate" required>
+            
+            <label for="status">status</label>
+            <select name="status" id="subTaskStatus">
+                <option value="inProgress">inProgress</option>
+                <option value="completed">completed</option>
+                <option value="canceled">canceled</option>
+                <option value="duePast">duePast</option>
+                <option value="deleted">deleted</option>
+            </select>
+            
+            <button type="submit" id="subTaskButton">Add Subtask</button>
+        </form>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

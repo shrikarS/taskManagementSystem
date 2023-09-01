@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5rem;
+    height: 11.0625rem;
+
+}
+
+header div{
+    display: flex;
+    height: 40px;
+    gap: 15px;
+}
+
+header div input{
+    margin: 10px;
+}
+
+header div button{
+    margin: 10px;
+    background-color: greenyellow;
+    color: black;
+    font-weight: 700;
+}
+
+body {
+    font-family: Open Sans;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+header {
+    color: black;
+    padding: 10px 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5rem;
+}
+
+#formSection input, select{
+    width: 100%;
+    height: 2rem;
+}
+
+#subtaskForm input, select{
+    width: 100%;
+    height: 2rem;
+}
+
+.heroSection > div {
+    flex: 1; /* Each child div takes half the width of the parent */
+}
+
+.heroSection > div:first-child {
+    margin-right: 20px; /* Margin between the form and the table */
+}
+
+form {
+    background-color:burlywood;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label,
+form input,
+form select,
+form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select option[value = "deleted"], [value = "canceled"] {
+    display: none;
+} 
+
+#ParentTaskButton, #subTaskButton{
+    height: 2rem;
+    background-color: greenyellow;
+    font-size: large;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Subtask style (if you decide to use a class for subtasks) */
+.subtask {
+    background-color: #eef;
+}
+
+#hiddenForm {
+    display: none; /* Hide the subtask form initially */
+}
